@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+  <metacharset="UTF-8">
+  <title>On's Thai Kitchen</title>
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+  <style>
+
+
+
+  @font-face
+{
+font-family: "Oswald-Regular";
+src: url('Oswald-Regular.ttf'),
+url('Oswald.eot');
+font-weight: normal;
+font-style: normal;
+}
+
+{
+font-family: "Oswald-Light";
+font-weight: normal;
+font-style: normal;
+src: url('Oswald-Light.ttf'),
+url('Oswald.eot');
+}
+
+{
+font-family: "Oswald-Bold";
+font-weight: normal;
+font-style: normal;
+src: url('Oswald-Bold.ttf'),
+url('Oswald.eot');
+}
+
+    * {
+      margin: 0;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .navcontainer {
+        width: 100%;
+        background-color: #ED3025;
+        position: fixed;
+        z-index: 9999;
+        height: 15%;
+        transition: all 1s ease-in-out;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.4);
+
+      }
+
+    .shrink{
+        height: 10%;
+    }
+
+    .logo {
+      height: auto;
+      width: 10%;
+      margin-left: 45%;
+      margin-right: 45%;
+      margin-top: 1%;
+      position: fixed;
+      text-align: center;
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+      transition: all 1s ease-in-out;
+      z-index: 10000;
+
+    }
+
+    .shrinklogo {
+      height: auto;
+      width: 5%;
+      margin-left: 47.5%;
+      margin-right: 47.5%;
+    }
+
+
+      #flagcontainer {
+        width: 100%;
+        height: 180px;
+        position: relative;
+      }
+
+      .home {
+        width: 8%;
+        height: 25%;
+        background-color: white;
+        font-family:"Oswald-Bold";
+        margin-top: 5%;
+        margin-left: 24%;
+        color: #ED3025;
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 1s ease-in-out;
+      }
+
+      .home2 {
+        width: 100%;
+        height: 100px;
+        margin-top: 5%;
+        background-color: #ED3025;
+        font-family:"Oswald-Bold";
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 1s ease-in-out;
+      }
+
+      .homeshrink {
+        margin-top: 1.5%;
+        margin-left: 27.5%;
+        width: 8%;
+        height: 40%;
+      }
+
+      .menu {
+        width: 8%;
+        height: 25%;
+        background-color: white;
+        font-family:"Oswald-Bold";
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        color: #ED3025;
+        position: relative;
+        margin-top: 5%;
+        margin-left: 3%;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 1s ease-in-out;
+      }
+      .menushrink {
+        margin-top: 1.5%;
+        margin-left: 2%;
+        width: 8%;
+        height: 40%;
+      }
+
+      .about {
+        width: 8%;
+        height: 25%;
+        background-color: white;
+        font-family:"Oswald-Bold";
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        color: #ED3025;
+        display: inline-block;
+        position: relative;
+        margin-top: 5%;
+        margin-left:3%;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 1s ease-in-out;
+      }
+
+      .aboutshrink {
+        margin-top: 1.5%;
+        margin-left: 2%;
+        width: 8%;
+        height: 40%;
+      }
+
+      .contact {
+        width: 8%;
+        height: 25%;
+        background-color: white;
+        font-family:"Oswald-Bold";
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 100%;
+        color: #ED3025;
+        display: inline-block;
+        position: relative;
+        margin-top: 5%;
+        margin-left: 14%;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+        transition: all 1s ease-in-out;
+
+      }
+
+      .contactshrink {
+        margin-top: 1.5%;
+        margin-left: 9%;
+        width: 8%;
+        height: 40%;
+      }
+
+
+      .whiteflag{
+        width: 100%;
+        height: 90%;
+        background-color: white;
+        position: relative;
+      }
+
+    #blueflag{
+      width: 100%;
+      height: 20%;
+      margin: 0 auto;
+      background-color: #262261;
+      position: relative;
+    }
+
+    #blueflag2{
+      width: 100%;
+      height: 20%;
+      margin: 0 auto;
+      background-color: #262261;
+      position: relative;
+    }
+
+    #blueflag3{
+      width: 100%;
+      height: 20%;
+      margin: 0 auto;
+      display: inline-block;
+      background-color: #262261;
+      position: relative;
+    }
+
+    #blueflag4{
+      width: 100%;
+      height: 20%;
+      margin: 0 auto;
+      background-color: #262261;
+      position: relative;
+    }
+
+
+    #contactbox {
+      width: 100%;
+      height: 500px;
+      background-color: pink;
+      z-index: ;
+    }
+
+
+    .hoursbox {
+      padding-top: 5%;
+      width: 49%;
+      height: auto;
+      background-color: white;
+      display: inline-block;
+      font-family:"Oswald-Bold";
+      font-weight: normal;
+      font-style: normal;
+      float: left;
+      color: #ED3025;
+    }
+
+    .map {
+      overflow:hidden;
+      margin-top: 5%;
+      margin-right: 10%;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+    }
+
+
+    .righthoursbox {
+      padding-top: 1.5%;
+      width: 49%;
+      height: auto;
+      background-color: white;
+      display: inline-block;
+      font-family:"Oswald-Bold";
+      font-size: 15pt;
+      font-weight: normal;
+      font-style: normal;
+      float: right;
+      color: #ED3025;
+      margin-bottom: 3.5%;
+    }
+
+    .city{
+
+      font-family: "Oswald-Regular";
+      font-weight: 100;
+      text-align: left;
+      font-size: 300%;
+      margin-left: 20%;
+      margin-top: 2%;
+      color: #262261;
+    }
+
+    .adref {
+      height: 20%;
+      width: 100%;
+      padding-top: 2%;
+      padding-left: 20%;
+      font-family: "Oswald-Light";
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      font-size: 100%;
+      color: #262261;
+    }
+
+
+    .hourstable{
+
+      margin-left: 20%;
+      float: left;
+      margin-bottom: 15%;
+      color: #262261;
+      border: solid 3px;
+      border-collapse: collapse;
+
+    }
+
+
+    tr.hourheader td{
+      font-family:"Oswald-Light";
+      font-size: 150%;
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+        border: solid 1%;
+        padding: 1%;
+
+    }
+
+    tr.otsh td{
+      font-family:"Oswald-Regular";
+      font-size: 150% ;
+      font-weight: normal;
+      text-align: left;
+      border: solid 3px;
+      padding: 10px;
+      margin-top: auto;
+
+
+    }
+
+    tr.otcsh td{
+      font-family:"Oswald-Regular";
+      font-size: 150%;
+      font-weight: normal;
+      text-align: left;
+      border: solid 3px;
+      padding: 10px;
+      background-color: #ED3025;
+
+    }
+
+    a:link {
+        color: #ED3025;
+    }
+
+    /* visited link */
+    a:visited {
+        color: #262261;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #ED3025;
+    }
+
+    /* selected link */
+    a:active {
+        color: #ED3025;
+    }
+
+    #historybox{
+    width: 100%;
+    height: auto;
+    background-color: #ED3025;
+    display: inline-block;
+    }
+
+    .historysquare{
+      width: 50%;
+      height: auto;
+      background-color: #ED3025;
+      display: inline-block;
+      float: left;
+    }
+
+    .righthistorysquare{
+      width: 49%;
+      height: auto;
+      background-color: #ED3025;
+      display: inline-block;
+      float: right;
+    }
+
+    .historyopen{
+      margin-top:10%;
+      font-family: "Oswald-Regular";
+      font-weight: 100;
+      text-align: left;
+      font-size: 300%;
+      padding-left: 20%;
+      padding-right: 10%;
+      color: #262261;
+    }
+
+    .historytext {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      margin-left: 20%;
+      margin-right: 10%;
+      font-family: "Oswald-Light";
+      font-weight: normal;
+      font-style: normal;
+      text-align: left;
+      font-size: 150%;
+      color: white;
+    }
+
+    .historyimage {
+      background-color: #ED3025;
+      height: auto;
+      width: 80%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    .historychef{
+      width: 49%;
+      height: auto;
+      background-color: #ED3025;
+      display: inline-block;
+    }
+
+    #menubox{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: inline-block;
+    }
+
+    .menusquare{
+      margin-top: 2%;
+      margin-right: 2%;
+      width: 48%;
+      height: auto;
+      background-color: white;
+      display: inline-block;
+      float: left;
+      margin-bottom: 20%;
+    }
+
+    .rightmenusquare{
+      margin-top: 2%;
+      margin-left: 2%;
+      margin-bottom: 20%;
+      width: 48%;
+      height: auto;
+      background-color: white;
+      display: inline-block;
+      float: right;
+    }
+
+    .openmenutext {
+      font-family: "Oswald-Regular";
+      font-weight: 100;
+      text-align: left;
+      font-size: 300%;
+      margin-left: 10%;
+      margin-top: 2%;
+      width: 90%;
+      height: 0 auto;
+
+      color: #262261;
+    }
+
+
+    p.ing{
+      font-family:"Oswald-Regular";
+      margin-top:1%;
+      font-size: 80%;
+      font-weight: 200;
+      color: #262261;
+      margin-left: 5.5%;
+    }
+
+    p.add{
+      font-family:"Oswald-Regular";
+      font-size: 100%;
+      text-align: center;
+      font-weight:normal;
+      margin-bottom: 5%;
+      color: #262261;
+    }
+
+    p.num{
+      margin-top: 2%;
+      margin-right: 2%;
+      font-family:"Oswald-Light";
+      font-size: 100%;
+      font-weight: normal;
+      font-style: normal;
+      color: #262261;
+    }
+
+    ul.leaders {
+        font-family: "Oswald-Regular";
+        font-size: 24px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-right: 2%;
+        font-weight: 350;
+        color: #262261;
+        max-width: 40em;
+        padding: 0;
+        overflow-x: hidden;
+        list-style: none}
+
+    ul.leaders li:before {
+        float: left;
+        width: 0;
+        white-space: nowrap;
+        content:
+     ". . . . . . . . . . . . . . . . . . . . "
+     ". . . . . . . . . . . . . . . . . . . . "
+     ". . . . . . . . . . . . . . . . . . . . "
+     ". . . . . . . . . . . . . . . . . . . . "}
+
+    ul.leaders span:first-child {
+        padding-right: 0.33em;
+        background: white}
+
+    ul.leaders span + span {
+        float: right;
+        padding-left: 0.33em;
+        background: white}
+
+
+    button.accordion {
+    background-color: #262261;
+    color: white;
+    margin-bottom: 2%;
+    margin-left: 25%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 4, 0.5);
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-family: "Oswald-Light";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    transition: 0.4s;
+}
+
+
+    button.rightaccordion {
+    background-color: #262261;
+    color: white;
+    margin-bottom: 2%;
+    margin-right: 20.5%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 4, 0.5);
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-family: "Oswald-Light";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+    transition: 0.4s;
+    }
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ED3025;
+}
+
+button.rightaccordion.active, button.rightaccordion:hover {
+    background-color: #ED3025;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    margin-bottom: 2%;
+    margin-left: 20.5%;
+    max-height: 0;
+    text-align: left;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+div.panel2 {
+    padding: 0 18px;
+    background-color: white;
+    margin-bottom: 2%;
+    margin-right: 20.5%;
+    max-height: 0;
+    text-align: left;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next{position:relative;z-index:99} {
+  width: 10%;
+  height: 10%;
+  top: 50%;
+  width: auto;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 5%;
+  border-radius: 30px 0 0 3px;
+  position: relative;
+  z-index: 999;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 2px;
+
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#contactref{
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+#aboutref{
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+#menuref{
+  overflow: hidden;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+
+}
+
+
+video#cooking{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    float: right;
+}
+
+.opacity:before{
+  float: left;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-color: rgba(237, 48, 37, 0.5);
+}
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="navcontainer">
+
+<a href="#flagcontainer">
+    <div class="home"> Home </div>
+</a>
+
+<a href="#menuref">
+    <div class="menu"> Menu </div>
+</a>
+
+<a href="#contactref">
+    <div class="contact"> Contact </div>
+</a>
+
+<a href="#aboutref">
+    <div class="about"> About </div>
+</a>
+
+  </div> <!--this is the end of the nav container-->
+
+  <img class="logo" src="Asset 5.png"></img>
+
+  <div id="flagcontainer">
+      <div class="whiteflag"></div>
+      <div id="blueflag"></div>
+
+      <div class="slideshow-container">
+
+
+
+  <div class="mySlides fade">
+    <img src="pt5.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="ty.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+        <video src="cooking.mp4" width="100%" height="auto" autoplay="true" loop="true" frameborder="0"></iframe>
+        </div>
+
+  <div id="contactref"></div>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+  <div id="blueflag2"></div>
+
+  <div id="#contactbox">
+
+  <div class="hoursbox">
+
+      <div class="city">Midway St.Paul</div>
+
+        <div class="adref">
+            <a href="https://www.google.com/maps/place/Ons+Kitchen+Thai+Cuisine/@44.9559195,-93.1706501,17z/data=!3m1!4b1!4m5!3m4!1s0x87f62a07fa056aad:0xc8e4fb3e278af89f!8m2!3d44.9559195!4d-93.1684614">1613 University Ave West Saint Paul MN 55104 US</a>
+          </div>
+          <br>
+        <p style ="font-size:150%; margin-left:20%; color:#262261;" >(651) 644-1444</p>
+
+<br>
+    <table class="hourstable">
+<br>
+    <tbody>
+      <tr class="hourheader"><td colspan="2"> On's Thai Kitchen Hours</td></tr>
+      <tr class="otsh"><td>Open:</td> <td> Tuesday-Saturday 9am-9pm</td> </tr>
+      <tr class="otcsh"><td>Closed:</td> <td> Monday & Sunday </td> </tr>
+
+</tbody>
+</table>
+</div><!-- this is the end of hoursbox-->
+
+ <div class="righthoursbox">
+
+       <div class="map">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.3972669491623!2d-93.17065544910854!3d44.95591947899568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f62a07fa056aad%3A0xc8e4fb3e278af89f!2sOn&#39;s+Kitchen+Thai+Cuisine!5e0!3m2!1sen!2sus!4v1508952989751" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+   <div id="aboutref"></div>
+    </div>
+
+  </div><!-- this is the end of righthoursbox-->
+          </div> <!--This is the end of contactbox-->
+  <div id="blueflag3"></div>
+
+      <div id="historybox">
+
+            <div class="historysquare">
+                <p class="historyopen">ON'S KITCHEN is...<p/>
+                <div class="historytext">
+                  An authentic Thai restaurant with an extensive menu of home made fresh dishes cooked by owner and head chef "On" Khumchaya. She started cooking Thai food at the age of eight years old for herself and her younger brothers and sister in Khlong Suan, Chachoengsao, Thailand.
+                  <br>
+                  <br>
+                  On takes deep pride in all of her cooking and we at ON'S KITCHEN feel that it shows when you taste her food.
+                  <br>
+                  <br>
+                  Thank YOU for all your support!
+                  </div> <!--historytext-->
+
+          </div> <!--historysquare-->
+
+          <div class="righthistorysquare">
+          <img class="historyimage" src="chef.png">
+          </div>
+
+    </div> <!--historybox-->
+
+<div id="menuref"></div>
+    <div id="blueflag4"> </div>
+
+
+    <div id="menubox">
+      <div class="openmenutext"> Menu</div>
+      <br>
+      <div class="menusquare">
+
+        <button class="accordion">Appetizers</button>
+  <div class="panel">
+<ul class="leaders">
+<li><span>1. Fried Egg Rolls (3 pcs)</span><span>3.00</span></li>
+<li><span>2. Fresh Spring Rolls (2 pcs)</span><span> 4.50</span></li>
+<li><span>3. Stuffed Crab Cakes</span><span>7.99</span></li>
+<li><span>4. Crispy Chicken Wings</span><span>6.99</span></li>
+<li><span>5. Fried Egg Rolls (3 pcs)</span><span>3.00</span></li>
+<li><span>6. Fresh Spring Rolls (2 pcs)</span><span>4.50</span></li>
+<li><span>7. Stuffed Crab Cakes</span><span>7.99</span></li>
+<li><span>8. Crispy Chicken Wings</span><span>6.99</span></li>
+<li><span>9. Fried Egg Rolls (3 pcs)</span><span>3.00</span></li>
+<li><span>10. Fresh Spring Rolls (2 pcs)</span><span>4.50</span></li>
+<li><span>11. Stuffed Crab Cakes</span><span>7.99</span></li>
+<li><span>12. Crispy Chicken Wings</span><span>6.99</span></li>
+<li><span>13. Fried Egg Rolls (3 pcs)</span><span>3.00</span></li>
+<li><span>14. Fresh Spring Rolls (2 pcs)</span><span>4.50</span></li>
+<li><span>15. Stuffed Crab Cakes</span><span>7.99</span></li>
+<li><span>16. Crispy Chicken Wings</span><span>6.99</span></li>
+<li><span>17. Fried Egg Rolls (3 pcs)</span><span>3.00</span></li>
+<li><span>18. Fresh Spring Rolls (2 pcs)</span><span>4.50</span></li>
+<li><span>19. Stuffed Crab Cakes</span><span>7.99</span></li>
+<li><span>20. Crispy Chicken Wings</span><span>6.99</span></li>
+</ul> <!--this is the end of leaders-->
+  </div>
+
+  <button class="accordion">Thai Salad</button>
+  <div class="panel">
+    <ul class="leaders">
+    <li><span>21. Nam Thok</span><span>9.99</span></li>
+    <p class="ing">( Thai Style Sliced Meat Salad Served with Lettuce )</p>
+    <li><span>22. Nam Thok Kor Moo Yang</span><span>10.99</span></li>
+    <li><span>23. Laab</span><span>9.99</span></li>
+    <li><span>24. Papaya Salad</span><span>8.99</span></li>
+    <li><span>25. Nam-Khao</span><span>10.99</span></li>
+    <p class="ing">( Spiced Rice, Sausage, Peanuts, Coconut in Lime Vinaigrette )</p>
+    <li><span>26. Yum Woon Sen</span><span>10.99</span></li>
+    <p class="ing">( Clear Noodles, Pork, Shrimp, Peanuts in Lime Vinaigrette )</p>
+    <li><span>27. Yum Seafood</span><span>14.99</span></li>
+    <p class="ing">( Shrimp, Squid, Imitation Crab & Mushrooms in Chilies/Lime )</p>
+    <li><span>28. Shrimp & Lemon Grass</span><span>10.99</span></li>
+    <li><span>29.Mango Salad</span><span>9.99</span></li>
+    <p class="ing">( Shredded Mango, Dry Shrimp, Peanuts in Lime Vinaigrette )</p>
+    <li><span>30. Yum Saam Grop</span><span>12.99</span></li>
+    <p class="ing">( Crispy Squid, Fish Bladder, Peanuts, Thai herb in Chiles Lime )</p>
+    <li><span>31. House Salad</span><span>8.99</span></li>
+    <p class="ing">( Mixed Greens Served with On’s Balsamic Dressing )</p>
+    <li><span>32. Thai Garden Salad</span><span>8.99</span></li>
+    <li><span>33. Yum Khana Gaeow w/Shrimp</span><span>10.99</span></li>
+    <li><span>34. Fireside Steak Salad</span><span>13.99</span></li>
+    <li><span>35. Bamboo Salad</span><span>9.99</span></li>
+  </ul>
+  </div>
+
+  <button class="accordion">Noodle Soup</button>
+  <div class="panel">
+  <ul class="leaders">
+    <p class="add"> ( SOUP SIZES: LARGE $1.50, EXTRA LARGE $2.00 )</p>
+    <li><span>36. Seafood Noodle Soup</span><span>9.29</span></li>
+    <li><span>37. Beef Combination</span><span>9.29</span></li>
+    <p class="ing">( Beef, Tripe, and Meatballs )</p>
+    <li><span>38. Beef Noodle Soup</span><span>8.99</span></li>
+    <li><span>39. Nam-Thok Noodle Soup </span><span>9.99</span></li>
+    <li><span>40. Doo Dee Noodle Soup </span><span>9.99</span></li>
+    <p class="ing">( Sour Soup w/ Imitation Crab, Squid, and Shrimp )</p>
+    <li><span>41. Tom Yum Noodle Soup</span><span>9.29</span></li>
+    <p class="ing">( Sour & Spicy Soup w/ Ground Pork, BBQ Pork & Peanuts. )</p>
+    <li><span>42. Suki-Yaki Soup</span><span>9.99</span></li>
+    <li><span>43. Yen Tha Phoe Soup</span><span>9.99</span></li>
+    <p class="ing">( Squid, Imitation Crab, Meatballs, Mushroom and Fried Tofu )</p>
+    <li><span>44. Wonton Soup</span><span>9.29</span></li>
+    <li><span>45. Egg Noodles & Wontons Soup</span><span>9.99</span></li>
+    <li><span>46. Mee-Haeng</span><span>9.29</span></li>
+    <p class="ing">( Dry Egg Noodle Salad with Side Soup )</p>
+    <li><span>47. Kao-poon-Gai</span><span>9.29</span></li>
+    <li><span>48. Kaou jub</span><span>9.99</span></li>
+    <p class="ing"> (Rolled Rice Noodles Served in Rich Dark Broth topped with
+      Fried Bacon, Tofu, and Hard Boiled Eggs.)</p>
+    </ul>
+  </div>
+
+  <button class="accordion">Rice Dishes</button>
+  <div class="panel">
+    <ul class="leaders">
+    <li><span>49. Khao Mun Gai</span><span>9.99</span></li>
+  <p class="ing">( Chicken served w/ On’s Ginger & Garlic Sauce )</span></li>
+    <li><span>50. Khao Mu-Daeng</span><span>9.99</span></li>
+  <p class="ing">( BBQ Red Pork topped w/ On’s Red Sauce )</span></li>
+    <li><span>51. Khao Ka-Mu</span><span>9.99</span></li>
+  <p class="ing">( Five Spiced Pork, Hard Boiled Egg Served on Top of Rice )</span></li>
+    <li><span>51A. Khao Ka-Mu Entrée</span><span>12.99</span></li>
+  <p class="ing">( Five Spiced Pork Entrée Style )</span></li>
+    <li><span>52. Khao Pad-Ga-Prow w/Fried Egg</span><span>9.99</span></li>
+  <p class="ing">( Fried Egg & Stir Fried Meat w/ Fresh Basil Leaves )</p>
+    <li><span>53. Khao Pad</span><span>9.99</span></li>
+  <p class="ing">( Fried Rice w/ Your Choice of Meat )</p>
+    <li><span>54. Pineapple fried rice</span><span>9.99</span></li>
+    <li><span>55. Crab fried rice</span><span>11.99</span></li>
+    </ul>
+    </div>
+
+</div> <!--end of left square-->
+<div class="rightmenusquare">
+
+  <button class="rightaccordion">Stir Fry & Hot Dishes</button>
+  <div class="panel2">
+    <ul class="leaders">
+  <p class="add">Choice of Pork, Chicken, Beef, Mock Duck,Tofu, Veg, [Shrimp add $2, Seafood add $3] </p>
+    <li><span>56. Pad-Ga-Prow</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Meat w/ Basil & Chili Peppers )</p>
+    <li><span>57. Pad-Phong-Ga-Lee</span><span>17.99</span></li>
+  <p class="ing">( Stir Fried Soft Shell Crab, Yellow Curry with Green Onion. )</p>
+    <li><span>58. Stir Fried Ginger</span><span>9.99</span></li>
+    <li><span>58A. Pad Puck</span><span>9.99</span></li>
+<p class="ing">( Stirred Fried Assorted Veggies )</p>
+  <li><span>59. Pad-Khana-Moo-Grop</span><span>10.99</span></li>
+  <p class="ing">( Stir Fried Chinese Broccoli with Crispy Thick Bacon )</p>
+  <li><span>60. Pad Prik Green Pea pods</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Red Curry paste w/ meat and Fresh Green Pea Pods )</p>
+  <li><span>61. Pad Shrimp & Asparagus</span><span>10.99</span></li>
+  <p class="ing">( Stir Fried Asparagus with Shrimp )</p>
+  <li><span>62. Pad Woon-Sen</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Clear Noodle with Meat & Vegetables )</p>
+  <li><span>63. Spicy Seafood Stir Fried</span><span>16.99</span></li>
+  <li><span>64. Lad-Na</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Flat, Thin, or Crunchy Noodles, w/ On’s Gravy )</p>
+  <li><span>65. Pad-See-Ew</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Flat Rice Noodles )</p>
+  <li><span>66. Pad Thai</span><span>9.99</span></li>
+  <li><span>67. Goong-Op-Woon-Sen</span><span>10.99</span></li>
+  <p class="ing">( Shrimp & Clear Noodle Steamed with Fresh Ginger )</p>
+  <li><span>68. Spicy Noodle</span><span>9.99</span></li>
+  <p class="ing">( Thin Noodles, Veg. & Meat w/ Egg, & On’s Spicy Sauce )</p>
+  <li><span>69. Pad Suki-Yaki</span><span>10.99</span></li>
+  <p class="ing">( Stir Fried Clear Noodles w/ Egg & On’s Suki-Yaki Sauce )</p>
+  <li><span>70. Pad Prik moo grop</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Crispy Thick Bacon with Thai Basil and Chilies )</p>
+  <li><span>71. Pad Prik On</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Jalapenos Peppers and Mushroom )</p>
+  <li><span>72. Mango Chicken</span><span>10.99</span></li>
+  <p class="ing">( Stir Fried Mango & Crispy Chicken Topped w/ Cashews. )</p>
+  <li><span>73. Cashew Chicken</span><span>10.99</span></li>
+  <p class="ing">( Red/Green Pepper, Onions with Cashew )</p>
+  <li><span>74. Sweet & Sour</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Cucumber, Tomatoes & Pineapple )</p>
+  <li><span>75. Oyster brocolli</span><span>9.99</span></li>
+  <p class="ing">( Stir Fried Broccoli & Oyster Sauce )</p>
+  <li><span>76. Praram loang soang</span><span>9.99</span></li>
+  <p class="ing">( Mixed Veggies Topped with Peanut Sauce )</p>
+  </ul>
+  </div>
+
+  <button class="rightaccordion">Thai Soup & Curry</button>
+  <div class="panel2">
+    <ul class="leaders">
+  <p class="add">Choice of Pork, Chicken, Beef, Mock Duck,Tofu, Veg, [Shrimp add $2, Seafood add $3]</p>
+  <li><span>77. Tom Yum</span><span>10.99</span></li>
+  <p class="ing">( Hot and Sour Soup with Mushrooms and Cilantro )</p>
+  <li><span>78. Tom Ka</span><span>9.99</span></li>
+  <p class="ing">( Coconut Cream Soup w/ Mushrooms and Cilantro )</p>
+  <li><span>79. Tom Saap</span><span>12.99</span></li>
+  <p class="ing">( Spicy & Sour Tripe Soup )</p>
+  <li><span>80. Tofu Soup</span><span>10.99</span></li>
+  <p class="ing">( Fresh Tofu & Meat Topped w/ Green Onion & Cilantro )</p>
+  <li><span>81. Ka-Praow-Pla</span><span>11.99</span></li>
+  <p class="ing">( Fish Bladder, Soft Quail Eggs, Chicken )(NO SUBSTITUTIONS) </p>
+  <li><span>82. Rice Soup</span><span>9.99</span></li>
+  <li><span>83. Kaeng Som-Goong</span><span>10.99</span></li>
+  <p class="ing">( Hot Shrimp Paste Sour Soup w/ Shrimp & Veggies )</p>
+  <li><span>84. Thai Green Curry</span><span>9.99</span></li>
+  <p class="ing">( Green Curry w/ Eggplant )</p>
+  <li><span>85. Thai Red Curry</span><span>9.99</span></li>
+  <p class="ing">( Red Curry w/ Bamboo Shoots, Egg Plant )</p>
+  <li><span>86. Pineapple Curry</span><span>9.99</span></li>
+  <li><span>87. Panang Curry</span><span>9.99</span></li>
+  <p class="ing">( Dry Red Curry with Meat )</p>
+  <li><span>88. Massamun Curry</span><span>9.99</span></li>
+  </div>
+
+  <button class="rightaccordion">On's Special Dishes</button>
+  <div class="panel2">
+    <ul class="leaders">
+  <li><span>89. Three Flavors Fish</span><span>21.99</span></li>
+  <p class="ing">( Deep Fried Filet Tilapia topped w/ On’s Tangy Sauce )</p>
+  <li><span>90. Pla-Lad-Prik</span><span>21.99</span></li>
+  <p class="ing">( Deep Fried Filet Tilapi a topped w/ Curry Seasoning )</p>
+  <li><span>91. Steamed Tilapia w. Lime & Chilies</span><span>21.99</span></li>
+  <li><span>92. Pla-Louee-Suon</span><span>21.99</span></li>
+  <p class="ing">( Crispy Filet Fish w/ Mango and Lemon Grass Sauce )</p>
+  <li><span>93. Crispy Tilapia w/ Garlic & Pepper</span><span>21.99</span></li>
+  <li><span>94. Pad Sa-Thor</span><span>18.99</span></li>
+  <p class="ing">( Stir Fried SA-THOR Beans with Shrimp & Ground Pork )</p>
+  <li><span>95. Spicy Cat Fish Stir Fried</span><span>21.99</span></li>
+  <li><span>96. Num Prik Pla Too</span><span>22.99</span></li>
+  <p class="ing">( Fried Mackerel Fish, Steamed Veg. w/ Shrimp Paste Sauce )</p>
+  <li><span>97. Crispy Shrimp or Squid w/ Pepper & Garlic</span><span>20.99</span></li>
+  <li><span>98. Crispy Soft Shell Crab w/Garlic</span><span>20.99</span></li>
+  <li><span>99. Basil Clam</span><span>17.99</span></li>
+  <li><span>100.Dry Salted Fish</span><span>9.99</span></li>
+  <li><span>101. Pad Tofu Sae-Shuan</span><span>16.99</span></li>
+  <p class="ing">( Fresh Tofu, Dry Pepper, Ground Pork, Shrimp, & Bell Pepper )</p>
+  <li><span>102. Kaeng Pa</span><span>10.99</span></li>
+  <li><span>103. Pad Prik Salmon</span><span>21.99</span></li>
+  <li><span>104. Kaeng Som Bae-Saa</span></li>
+  <p class="ing">( With Tilapia Filet for 15.99 or With Shrimp for 18.99)</p>
+  <li><span>105. Pad Egg Plant</span><span>14.99</span></li>
+  <p class="ing">( Egg Plants, Ground pork, Shrimp, Bell Pepper, & Basil )</p>
+</ul>
+  </div>
+
+  <button class="rightaccordion">Dessert</button>
+  <div class="panel2">
+    <ul class="leaders">
+  <li><span>106. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>107. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>108. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>109. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>110. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>111. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>112. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>113. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>114. Mango Sticky Rice </span><span> 8.99</span></li>
+  <li><span>115. Mango Sticky Rice </span><span> 8.99</span></li>
+  </ul>
+  </div>
+
+
+
+</div> <!--This is the end of rightmenusquare-->
+<a href="#flagcontainer">
+    <div class="home2"> BACK TO TOP </div>
+</a>
+    </div> <!--This is the end of menubox-->
+
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+
+    <script>
+    var acc = document.getElementsByClassName("rightaccordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel2 = this.nextElementSibling;
+        if (panel2.style.maxHeight){
+          panel2.style.maxHeight = null;
+        } else {
+          panel2.style.maxHeight = panel2.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+
+<script>
+      $(document).on("scroll", function(){
+    		if
+          ($(document).scrollTop() > 150){
+    		  $(".logo").addClass("shrinklogo");
+          $(".navcontainer").addClass("shrink");
+          $(".home").addClass("homeshrink");
+          $(".menu").addClass("menushrink");
+          $(".about").addClass("aboutshrink");
+          $(".contact").addClass("contactshrink");
+
+    		}
+    		else
+    		{
+    			$(".logo").removeClass("shrinklogo");
+          $(".navcontainer").removeClass("shrink");
+          $(".home").removeClass("homeshrink");
+          $(".menu").removeClass("menushrink");
+          $(".about").removeClass("aboutshrink");
+          $(".contact").removeClass("contactshrink");
+
+
+    		}
+    	});
+  </script>
+
+<script>
+
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1200, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+  </div> <!--this is the end of flagcontainer-->
+
+
+</body>
+</html>
